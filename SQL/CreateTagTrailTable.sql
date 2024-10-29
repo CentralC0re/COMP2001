@@ -1,0 +1,7 @@
+CREATE TABLE CW1.TagTrailTable(
+    TrailID INT,
+    TagID INT,
+    PRIMARY KEY(TrailID, TagID),
+    FOREIGN KEY(TrailID) REFERENCES CW1.TrailTable(TrailID),
+    FOREIGN KEY(TagID) REFERENCES CW1.TagTable(TagID)
+)
