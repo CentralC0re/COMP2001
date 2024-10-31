@@ -6,7 +6,7 @@ CREATE TABLE CW1.TrailTable(
     LengthVal FLOAT,    --Always in KM, Length is reserved
     ElevationGain INT,  --Always to the nearest whole meter.
     RouteType VARCHAR(13) NOT NULL, -- MUST be "Loop" or "Out and Back"
-    DescriptionVal VARCHAR,
+    DescriptionVal VARCHAR(MAX),
     EstimatedTime TIME,
     LocationID INT,
     UserID INT,
