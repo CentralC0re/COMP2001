@@ -1,0 +1,9 @@
+CREATE TABLE CW1.LogTable
+(
+    TrailID INT NOT NULL,
+    UserID INT NOT NULL,
+    TimeStmp DATETIME NOT NULL,
+    PRIMARY KEY (TrailID, UserID),
+    FOREIGN KEY (TrailID) REFERENCES CW1.TrailTable(TrailID),
+    FOREIGN KEY (UserID) REFERENCES CW1.UserTable(UserID)
+)

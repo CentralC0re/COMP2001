@@ -1,0 +1,9 @@
+CREATE PROCEDURE CW1.DeleteTrail @TrailID INT
+
+AS
+
+DELETE
+FROM CW1.TrailTable
+WHERE TrailID = @TrailID;
+
+GO
