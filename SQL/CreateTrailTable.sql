@@ -11,5 +11,9 @@ CREATE TABLE CW1.TrailTable(
     LocationID INT,
     UserID INT,
     FOREIGN KEY (LocationID) REFERENCES CW1.LocationTable(LocationID),
-    FOREIGN KEY (UserID) REFERENCES CW1.UserTable(UserID)
+    FOREIGN KEY (UserID) REFERENCES CW1.UserTable(UserID),
+
+    CONSTRAINT CK_Difficulty CHECK (Difficulty = 'Easy' OR Difficulty = 'Moderate' OR Difficulty = 'Hard'),
+    CONSTRAINT CK_Rating CHECK (Rating >= 1 AND Rating <= 5),
+    CONSTRAINT CK_RType CHECK (RouteType = 'Loop' OR RouteType = 'Out and Back')
 )
