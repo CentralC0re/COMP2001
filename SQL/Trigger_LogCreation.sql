@@ -5,7 +5,7 @@ AFTER INSERT
 AS
 
 DECLARE @TrailID INT
-SET @TrailID = IDENT_CURRENT('CW1.TrailTable')  -- Returns NULL if a deletion has been performed, though this shouldn't be an issue
+SET @TrailID = IDENT_CURRENT('CW1.TrailTable')
 
 DECLARE @UserID INT
 SELECT @UserID = [UserID]

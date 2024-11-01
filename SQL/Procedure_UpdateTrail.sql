@@ -2,7 +2,7 @@ CREATE PROCEDURE CW1.UpdateTrail @TrailID INT, @TrailName VARCHAR(40), @Difficul
 @LengthVal FLOAT, @ElevationGain INT, @RouteType VARCHAR(13), @Descript VARCHAR(MAX),
 @EstimatedTime TIME, @LocationKey INT
 
-AS  -- Ideally, this would re-use existing values if they were null. Alas, IF... ELSE only works for SELECT
+AS  -- Ideally, this would re-use existing values if they were null.
 
 UPDATE CW1.TrailTable
 SET NameVal = @TrailName, Difficulty = @Difficulty, Rating = @Rating, LengthVal = @LengthVal, ElevationGain = @ElevationGain,
